@@ -1,4 +1,4 @@
-require 'net'
+require 'net/http'
 class SyntaxHighlighter
   PYGMENTS_URI = 'http://pygments.appspot.com/'
   attr_accessor :doc
