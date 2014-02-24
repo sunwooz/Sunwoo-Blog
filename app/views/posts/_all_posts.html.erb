@@ -1,0 +1,13 @@
+<% if !@posts.empty? %>
+  <% @posts.each do |post| %>
+    <div class="post">
+      <h1><%= link_to post.title, post_path(post) %></h1>
+      <em><%= post.created_at %></em>
+      <p><%=raw post.body_html %></p>
+    </div>
+    <%= link_to 'edit', edit_post_path(post) %>
+    <%= link_to 'destroy', post_path(post), method: :delete, data: { confirm: "Are you sure?" } %>
+  <% end %>
+<% else %>
+  <h1>There are no posts1</h1>
+<% end %>
