@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :authenticate_user!, :except => [:index]
+  before_action :authenticate_correct_user!, :except => [:index]
 
   def index
     @posts = Post.all
@@ -42,5 +44,9 @@ class PostsController < ApplicationController
 
     def post_params
       params.require(:post).permit(:title, :content, :body_html) if params[:post]
+    end
+
+    def authenticate_correct_user!
+      redirect_to posts_path if current_user.email.downcase != "yangsunwoo@gmail.com"
     end
 end

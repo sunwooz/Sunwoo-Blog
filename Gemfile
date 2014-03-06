@@ -16,6 +16,7 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'redcarpet'
+gem 'devise'
 
 gem 'markdown-rails'
 gem 'pygments.rb'
