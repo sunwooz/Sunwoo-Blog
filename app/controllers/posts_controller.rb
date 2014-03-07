@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_correct_user!, :except => [:index]
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order("created_at DESC")
   end
 
   def new
@@ -27,7 +27,7 @@ class PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
     post.update_attributes!(post_params)
-    redirect_to root_url
+    redirect_to post_path(params[:id])
   end
 
   def destroy
