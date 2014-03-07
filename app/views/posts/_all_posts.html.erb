@@ -4,7 +4,7 @@
       <h1><%= link_to post.title, post_path(post) %></h1>
       <em>Posted <%= time_ago_in_words(post.created_at) %> ago.</em>
     </div>
-    <% if current_user.email.downcase == "yangsunwoo@gmail.com" %>
+    <% if current_user && current_user.email.downcase == "yangsunwoo@gmail.com" %>
       <%= link_to 'edit', edit_post_path(post) %>
       <%= link_to 'destroy', post_path(post), method: :delete, data: { confirm: "Are you sure?" } %>
     <% end %>
