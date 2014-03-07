@@ -4,11 +4,11 @@
 
       <div class="post">
         <h1><%= @post.title %></h1>
-        <em><%= @post.created_at %></em>
+        <em><%= time_ago_in_words( @post.created_at ) %></em>
         <p><%=raw @post.body_html %></p>
         <%#= link_to 'edit', edit_post_path(@post) %>
         <%#= link_to 'destroy', post_path(@post), method: :delete, data: { confirm: "Are you sure?" } %>
       </div>
-      
+
   </div>
 </div>
