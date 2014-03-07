@@ -2,11 +2,12 @@
   <% @posts.each do |post| %>
     <div class="post">
       <h1><%= link_to post.title, post_path(post) %></h1>
-      <em><%= post.created_at %></em>
-      <p><%=raw post.body_html %></p>
+      <em>Posted <%= time_ago_in_words(post.created_at) %> ago.</em>
     </div>
-    <%#= link_to 'edit', edit_post_path(post) %>
-    <%#= link_to 'destroy', post_path(post), method: :delete, data: { confirm: "Are you sure?" } %>
+    <% if current_user.email.downcase == "yangsunwoo@gmail.com" %>
+      <%= link_to 'edit', edit_post_path(post) %>
+      <%= link_to 'destroy', post_path(post), method: :delete, data: { confirm: "Are you sure?" } %>
+    <% end %>
   <% end %>
 <% else %>
   <h1>There are no posts1</h1>
