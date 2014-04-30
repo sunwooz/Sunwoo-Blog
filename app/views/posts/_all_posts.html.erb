@@ -1,14 +1,18 @@
-<% if !@posts.empty? %>
-  <% @posts.each do |post| %>
-    <div class="post">
-      <h1><%= link_to post.title, post_path(post) %></h1>
-      <em>Posted <%= time_ago_in_words(post.created_at) %> ago.</em>
+<% @posts.each do |post| %>
+  <section class="post">
+    <header class="entry-header">
+      <img class="entry-avatar" alt="Sunwoo Yang" height="52" width="52" src="https://pbs.twimg.com/profile_images/461598167847288832/TKNmUu5h.jpeg">
+      <h2 class="entry-title"><%= link_to post.title, post %></h2>
+      <p class="entry-meta">
+        Posted on <a class="entry-date" href="date.html">July 19, 2013</a> | By <a class="entry-author" href="author.html">Sunwoo Yang</a>
+      </p>
+    </header>
+    <div class="entry-description">
+      <p>
+        <%= post.content.slice(0, 200) + "..." %>
+      </p>
     </div>
-    <% if current_user && current_user.email.downcase == "yangsunwoo@gmail.com" %>
-      <%= link_to 'edit', edit_post_path(post) %>
-      <%= link_to 'destroy', post_path(post), method: :delete, data: { confirm: "Are you sure?" } %>
-    <% end %>
-  <% end %>
-<% else %>
-  <h1>There are no posts1</h1>
+  </section> <!-- /.post -->
 <% end %>
+
+<!--   | Tags <a class="label label-danger" href="tag.html">CSS3</a> -->

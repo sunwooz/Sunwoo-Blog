@@ -2,6 +2,10 @@
 <html>
 <head>
   <title>SunwooBlog</title>
+  <!-- Fonts -->
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C400italic%2C700" rel="stylesheet">
+  <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
@@ -26,7 +30,95 @@
     <p class="alert alert-error"><%= alert %></p>
   <% end %>
 
+  <div class="row">
+
+  <div class="col-md-8 col-md-offset-2">
+
+    <div id="secondary" class="col-sm-3 sidebar" style="display: none;">
+      <aside>
+
+        <div class="about">
+          <h4>About us</h4>
+          <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+        </div>
+
+        <div class="tags">
+          <h4>Tags</h4>
+          <ul>
+            <li>
+              <a href="tag.html" class="label label-danger">CSS3</a>
+            </li>
+            <li>
+              <a href="tag.html" class="label label-primary">HTML5</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="socialmedia">
+          <h4>Share</h4>
+          <div class="socials-sidebar">
+            <a class="btn btn-facebook" href="#" title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a class="btn btn-twitter" href="#" title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+            <a class="btn btn-linkedin" href="#" title="LinkedIn">
+              <i class="fa fa-linkedin"></i>
+            </a>
+            <a class="btn btn-flickr" href="#" title="Flickr">
+              <i class="fa fa-flickr"></i>
+            </a>
+            <a class="btn btn-pinterest" href="#" title="Pinterest">
+              <i class="fa fa-pinterest"></i>
+            </a>
+            <a class="btn btn-tumblr" href="#" title="Tumblr">
+              <i class="fa fa-tumblr"></i>
+            </a>
+            <a class="btn btn-dropbox" href="#" title="Dropbox">
+              <i class="fa fa-dropbox"></i>
+            </a>
+            <a class="btn btn-google-plus" href="#" title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+            <a class="btn btn-instagram" href="#" title="Instagram">
+              <i class="fa fa-instagram"></i>
+            </a>
+            <a class="btn btn-github" href="#" title="GitHub">
+              <i class="fa fa-github"></i>
+            </a>
+            <a class="btn btn-bitbucket" href="#" title="Bitbucket">
+              <i class="fa fa-bitbucket"></i>
+            </a>
+            <a class="btn btn-vk" href="#" title="VK">
+              <i class="fa fa-vk"></i>
+            </a>
+          </div> <!-- /.socials-sidebar -->
+        </div>
+
+      </aside>
+    </div> <!-- /#secondary -->
+
+    <div id="primary" class="col-sm-12">
+      <div class="content">
+
+        <header class="header">
+          <hgroup class="pull-left">
+            <h1 class="site-title">
+              <a rel="home" title="Sunwoo Yang" href="/">
+                <i class="fa fa-lemon-o"></i> Sunwoo Yang
+              </a>
+            </h1>
+          </hgroup>
+          <div id="togglesidebar" class="btn btn-primary pull-right">
+            <i class="fa fa-bars"></i>
+          </div>
+        </header> <!-- /header -->
   <%= yield %>
+          </div>
+        </div>
+      </div>
+    </div>
 
 </div>
 
