@@ -4,7 +4,7 @@
       <img class="entry-avatar" alt="Sunwoo Yang" height="52" width="52" src="https://pbs.twimg.com/profile_images/461598167847288832/TKNmUu5h.jpeg">
       <h2 class="entry-title"><%= link_to post.title, post %></h2>
       <p class="entry-meta">
-        Posted on <a class="entry-date" href="date.html">July 19, 2013</a> | By <a class="entry-author" href="author.html">Sunwoo Yang</a>
+        Posted <a class="entry-date" href="date.html"><%= time_ago_in_words(post.created_at) %> ago.</a> | By <a class="entry-author" href="author.html">Sunwoo Yang</a>
       </p>
     </header>
     <div class="entry-description">
