@@ -1,32 +1,66 @@
 
-<div id="primary" class="col-sm-12">
-  <div class="content">
+<span class="menu-trigger writer-icon animated fadeInDown">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</span>
+<div class="hero-image hero-a-great-story" style="">
 
-    <section class="post">
-      <header class="entry-header">
-        <img class="entry-avatar" alt="Paul Laros" height="52" width="52" src="https://pbs.twimg.com/profile_images/461598167847288832/TKNmUu5h.jpeg">
-        <h2 class="entry-title"><h1><%= @post.title %></h1></h2>
-        <p class="entry-meta">
-          Posted <a class="entry-date" href="date.html"><%= time_ago_in_words(@post.created_at) %> ago.</a> | By <a class="entry-author" href="author.html">Sunwoo Yang</a>
-        </p>
-      </header>
-      <div class="entry-description"><%=raw @post.body_html %></div>
-    </section>
+    <!-- if the user has javascript disabled they can still use the menu -->
+    <noscript>
+        <div class="no-js-menu">
+            <ul>
+                <li><i class="entypo-home"></i><a href="/">Home</a></li>
+                <li><i class="entypo-chart-area"></i><a href="dashboard.html">Stats</a></li>
+            </ul>
+        </div>
+    </noscript>
+    <!-- end no script -->
 
-    <div class="comments">
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-          var disqus_shortname = 'von-bootstrap'; // required: replace example with your forum shortname
-
-          /*** Don't edit below this line ***/
-          (function() {
-              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
-      </script>
-      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-    </div>
-  </div>
 </div>
+
+<div class="container">
+    <div class="row">
+
+    <div id="menu">
+        <ul>
+            <li><i class="entypo-home"></i><a href="/">Home</a></li>
+        </ul>
+    </div>
+
+    <div class="col-xs-12 main-content single-content">
+        <p class="meta">
+            <a class="" href="category.html">Sunwoo Yang</a> in <a class="" href="category.html">Storytime</a> <i class="link-spacer"></i> <i class="entypo-bookmark"></i> <%= (@post.content.split.size / 200.0).ceil %> minutes
+        </p>
+        <h1><%= @post.title %></h1>
+
+        <p class="subtitle"><%=raw @post.body_html %></p>
+
+    <div class="single-footer">
+        <!-- <div class="social clearfix">
+            <a class="btn btn-writer btn-like" href="#"><i class="entypo-heart"></i>Like</a>
+            <img src="img/profile-2.jpg" class="liked-this-icon" alt="user-image">
+            <img src="img/profile-3.jpg" class="liked-this-icon" alt="user-image">
+            <img src="img/profile-5.png" class="liked-this-icon" alt="user-image">
+
+            <a class="social-icon" target="_blank" href="https://twitter.com/sunwooz">
+                <i class="entypo-twitter"></i>
+            </a>
+
+        </div> -->
+<!--         <div class="category-list">
+            <p>Also found in</p>
+            <ul>
+                <li><a href="#">Stories</a></li>
+                <li><a href="#">Life</a></li>
+                <li><a href="#">Adventures</a></li>
+            </ul>
+        </div> -->
+    </div>
+
+    </div><!-- main-content/col -->
+
+
+    </div> <!--/row -->
+
+

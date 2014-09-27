@@ -2,18 +2,19 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.0.2'
 gem 'sass-rails', '~> 4.0.0'
-gem 'bootstrap-sass'
 # gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
 gem 'pg', :group => :production
 gem 'sqlite3', :group => :development
+gem 'less-rails'
+# gem 'better_errors'
+# gem 'sprockets_better_errors'
 
 gem 'unicorn-rails'
 
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
-gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 gem 'redcarpet'
 gem 'devise'
