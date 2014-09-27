@@ -4,20 +4,23 @@
     <span class="bar"></span>
     <span class="bar"></span>
 </span>
-<div class="hero-image" style="background: url(<%= @post.image.url(:large) %>); background-position: center;">
+
+<% if @post.image.url != "/images/original/missing.png" %>
+  <div class="hero-image" style="background: url(<%= @post.image.url(:large) %>); background-position: center;">
 
     <!-- if the user has javascript disabled they can still use the menu -->
     <noscript>
-        <div class="no-js-menu">
-            <ul>
-                <li><i class="entypo-home"></i><a href="/">Home</a></li>
-                <li><i class="entypo-chart-area"></i><a href="dashboard.html">Stats</a></li>
-            </ul>
-        </div>
+      <div class="no-js-menu">
+        <ul>
+          <li><i class="entypo-home"></i><a href="/">Home</a></li>
+          <li><i class="entypo-chart-area"></i><a href="dashboard.html">Stats</a></li>
+        </ul>
+      </div>
     </noscript>
     <!-- end no script -->
 
-</div>
+  </div>
+<% end %>
 
 <div class="container">
     <div class="row">
