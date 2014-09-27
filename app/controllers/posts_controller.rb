@@ -43,7 +43,7 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:title, :content, :body_html) if params[:post]
+      params.require(:post).permit(:title, :content, :body_html, :image) if params[:post]
     end
 
     def authenticate_correct_user!

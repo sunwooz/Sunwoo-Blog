@@ -4,7 +4,8 @@
     <span class="bar"></span>
     <span class="bar"></span>
 </span>
-<div class="hero-image hero-a-great-story" style="">
+<div class="hero-image" style="background: url(<%= @post.image.url(:large) %>)">
+    <%= link_to 'image', @post.image.url %>
 
     <!-- if the user has javascript disabled they can still use the menu -->
     <noscript>
