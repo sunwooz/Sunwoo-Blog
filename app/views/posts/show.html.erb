@@ -6,7 +6,7 @@
 </span>
 
 <% if @post.image.url != "/images/original/missing.png" %>
-  <div class="hero-image" style="background: url(<%= @post.image.url(:large) %>); background-position: center;">
+  <div class="hero-image img-responsive" style="background: url(<%= @post.image.url(:large) %>); background-position: center;">
 
     <!-- if the user has javascript disabled they can still use the menu -->
     <noscript>
