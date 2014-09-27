@@ -8,6 +8,7 @@ gem 'pg', :group => :production
 gem 'sqlite3', :group => :development
 gem 'less-rails'
 gem 'paperclip'
+gem 'aws-sdk'
 # gem 'better_errors'
 # gem 'sprockets_better_errors'
 
