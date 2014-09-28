@@ -11,136 +11,84 @@
 
         <div class="sidebar col-md-5 col-sm-12">
 
-            <span class="menu-trigger side-writer-icon animated fadeInDown">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </span>
+          <span class="menu-trigger side-writer-icon animated fadeInDown">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </span>
 
-            <!-- if the user has javascript disabled they can still use the menu -->
-            <noscript>
-                <div class="no-js-menu">
-                    <ul>
-                        <li><i class="entypo-home"></i><a href="#">Home</a></li>
-                        <li><i class="entypo-chart-area"></i><a href="dashboard.html">Stats</a></li>
-                    </ul>
-                </div>
-            </noscript>
-            <!-- end no script -->
+          <!-- if the user has javascript disabled they can still use the menu -->
+          <noscript>
+              <div class="no-js-menu">
+                  <ul>
+                      <li><i class="entypo-home"></i><a href="#">Home</a></li>
+                      <li><i class="entypo-chart-area"></i><a href="dashboard.html">Stats</a></li>
+                  </ul>
+              </div>
+          </noscript>
+          <!-- end no script -->
 
-            <div class="site-info">
-                <div class="primary-info">
-                <h1>Sunwoo Yang</h1>
-                  <p>Software Engineer, Traveller, Corgi Lover, Language Learner, Cook</p>
-                </div>
-                <!-- <div class="secondary-info">
+          <div class="site-info">
+              <div class="primary-info">
+              <h1>Sunwoo Yang</h1>
+                <p>Software Engineer, Traveller, Corgi Lover, Language Learner, Cook</p>
+              </div>
+              <!-- <div class="secondary-info">
 
-                    <p><a class="btn btn-writer btn-post" href="#"><i class="entypo-doc-text"></i>Join Us</a> or <a href="#">Share your story</a></p>
-                </div> -->
-            </div>
+                  <p><a class="btn btn-writer btn-post" href="#"><i class="entypo-doc-text"></i>Join Us</a> or <a href="#">Share your story</a></p>
+              </div> -->
+          </div>
 
         </div>
 
         <div class="col-md-7 col-sm-12 col-md-offset-5 main-content">
 
-            <div class="nav">
-              <a href="#" class="select-posts active">Posts</a>
-              <a href="#" class="select-categories">Categories</a>
+          <div class="nav">
+            <a href="#" class="select-posts active">All Posts</a>
+            <a href="#" class="select-categories">Book Reviews</a>
+          </div>
+
+          <div class="home-page-posts animated fadeIn">
+
+          <% @posts.each do |post| %>
+            <div class="post">
+              <section>
+                <div class="post-preview col-xs-10 no-gutter">
+
+                  <h2><%= link_to post.title, post %></h2>
+
+                  <p class="meta">
+                    <a class="" href="#">Sunwoo Yang</a><!--  in <a class="" href="category.html">Storytime</a> --> <i class="link-spacer"></i> <i class="entypo-bookmark"></i> <%= (post.content.split.size / 200.0).ceil %> minutes to read
+                  </p>
+                </div>
+
+                <div class=" col-xs-2  no-gutter">
+                  <%= image_tag "profile-1.jpg", class: "user-icon user-1" %>
+                </div>
+
+              </section>
             </div>
-
-            <div class="home-page-posts animated fadeIn">
-
-            <% @posts.each do |post| %>
-              <div class="post">
-                <section>
-                  <div class="post-preview col-xs-10 no-gutter">
-
-                    <h2><%= link_to post.title, post %></h2>
-
-                    <p class="meta">
-                      <a class="" href="#">Sunwoo Yang</a><!--  in <a class="" href="category.html">Storytime</a> --> <i class="link-spacer"></i> <i class="entypo-bookmark"></i> <%= (post.content.split.size / 200.0).ceil %> minutes
-                    </p>
-                  </div>
-
-                  <div class=" col-xs-2  no-gutter">
-                    <%= image_tag "profile-1.jpg", class: "user-icon user-1" %>
-                  </div>
-
-                </section>
-              </div>
-            <% end %>
+          <% end %>
             
         </div><!-- Home page posts -->
 
         <div class="home-page-categories hide animated fadeIn ">
+          <% @book_reviews.each do |book_review| %>
             <div class="category row">
-                <section>
-                    <div class="category-preview col-xs-6 col-sm-4 ">
-                        <h2>Easy Living</h2>
-                        <a href="category.html"><img src="img/cover-2.jpg" alt="category-image"></a>
-                    </div>
+              <section>
 
-                    <div class="category-preview col-xs-6 col-sm-4 ">
-                        <h2>Adventure</h2>
-                        <a href="category.html"><img src="img/cover-4.jpg" alt="category-image"></a>
-                    </div>
+                <div class="category-preview col-xs-6 col-sm-4">
+                  <h2><%= book_review.name %></h2>
+                  <%= link_to image_tag(book_review.image.url), book_review %>
+                </div>
 
-                    <div class="category-preview col-xs-6 col-sm-4 ">
-                        <h2>Storytime</h2>
-                        <a href="category.html"><img src="img/cover-6.jpg" alt="category-image"></a>
-                    </div>
-
-                    <div class="category-preview col-xs-6 col-sm-4 ">
-                        <h2>Open Roads</h2>
-                         <a href="category.html"><img src="img/cover-9.jpg" alt="category-image"></a>
-                    </div>
-
-                    <div class="category-preview col-xs-6 col-sm-4 ">
-                        <h2>Gaming</h2>
-                        <a href="category.html"><img src="img/cover-1.jpg" alt="category-image" ></a>
-                    </div>
-
-                    <div class="category-preview col-xs-6 col-sm-4 ">
-                        <h2>City Life</h2>
-                         <a href="category.html"><img src="img/cover-3.jpg" alt="category-image"></a>
-                    </div>
-
-                    <div class="category-preview col-xs-6 col-sm-4 ">
-                        <h2>Rave Culture</h2>
-                         <a href="category.html"><img src="img/cover-5.jpg" alt="category-image"></a>
-                    </div>
-
-                    <div class="category-preview col-xs-6 col-sm-4 ">
-                        <h2>Photography</h2>
-                        <a href="category.html"><img src="img/cover-7.jpg" alt="category-image"></a>
-                    </div>
-
-                    <div class="category-preview col-xs-6 col-sm-4 ">
-                        <h2>Animal Kingdom</h2>
-                         <a href="category.html"><img src="img/cover-8.jpg" alt="category-image"></a>
-                    </div>
-
-                    <div class="category-preview col-xs-6 col-sm-4 ">
-                        <h2>Beach</h2>
-                        <a href="category.html"><img src="img/cover-10.jpg" alt="category-image"></a>
-                    </div>
-
-                    <div class="category-preview col-xs-6 col-sm-4 ">
-                        <h2>Climbing</h2>
-                         <a href="category.html"><img src="img/cover-11.jpg" alt="category-image"></a>
-                    </div>
-
-                    <div class="category-preview col-xs-6 col-sm-4 ">
-                        <h2>Mystery</h2>
-                         <a href="category.html"><img src="img/cover-12.jpg" alt="category-image"></a>
-                    </div>
-
-                </section>
+              </section>
             </div>
+          <% end %>
         </div>
+        
         <div class="home-footer">
-            <i class="link-spacer"></i>
-
+          <i class="link-spacer"></i>
         </div>
 
         </div><!-- main content -->

@@ -11,7 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140927151600) do
+ActiveRecord::Schema.define(version: 20140927233456) do
+
+  create_table "book_reviews", force: true do |t|
+    t.string   "name"
+    t.string   "subtitle"
+    t.text     "review_text"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+  end
 
   create_table "posts", force: true do |t|
     t.string   "title"

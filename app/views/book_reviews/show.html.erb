@@ -1,0 +1,47 @@
+
+<span class="menu-trigger writer-icon animated fadeInDown">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</span>
+
+<% if @book_review.image.url != "/images/original/missing.png" %>
+  <div class="hero-image img-responsive" style="background: url(<%= @book_review.image.url %>); background-position: center;">
+
+    <!-- if the user has javascript disabled they can still use the menu -->
+    <noscript>
+      <div class="no-js-menu">
+        <ul>
+          <li><i class="entypo-home"></i><a href="/">Home</a></li>
+          <li><i class="entypo-chart-area"></i><a href="dashboard.html">Stats</a></li>
+        </ul>
+      </div>
+    </noscript>
+    <!-- end no script -->
+
+  </div>
+<% end %>
+
+<div class="container">
+    <div class="row">
+
+    <div id="menu">
+        <ul>
+            <li><i class="entypo-home"></i><a href="/">Home</a></li>
+        </ul>
+    </div>
+
+    <div class="col-xs-12 main-content single-content">
+        <p class="meta">
+            <i class="entypo-bookmark"></i> <%= (@book_review.review_text.split.size / 200.0).ceil %> minutes
+        </p>
+        <h1><%= @book_review.name %></h1>
+
+        <p class="subtitle"><%= @book_review.review_text %></p>
+
+    </div><!-- main-content/col -->
+
+
+    </div> <!--/row -->
+
+
