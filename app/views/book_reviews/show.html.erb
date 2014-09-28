@@ -37,7 +37,7 @@
         </p>
         <h1><%= @book_review.name %></h1>
 
-        <p class="subtitle"><%= @book_review.review_text %></p>
+        <p class="subtitle"><%=raw @book_review.body_html %></p>
 
     </div><!-- main-content/col -->
 
