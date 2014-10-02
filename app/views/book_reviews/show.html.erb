@@ -33,11 +33,11 @@
 
     <div class="col-xs-12 main-content single-content">
         <p class="meta">
-            <i class="entypo-bookmark"></i> <%= (@book_review.review_text.split.size / 200.0).ceil %> minutes
+            <i class="entypo-bookmark"></i> <%= (@book_review.review_text.split.size / 200.0).ceil %> minutes to read
         </p>
         <h1><%= @book_review.name %></h1>
 
-        <p class="subtitle"><%=raw @book_review.body_html %></p>
+        <p><%=raw @book_review.body_html %></p>
 
     </div><!-- main-content/col -->
 
