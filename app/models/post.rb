@@ -1,4 +1,7 @@
 class Post < ActiveRecord::Base
+  extend FriendlyId
+  friendly_id :title, use: [:slugged, :history]
+
   before_save :generate_body_html
 
   has_attached_file :image, styles: { large: "1555×1037" }

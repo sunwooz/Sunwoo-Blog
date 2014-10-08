@@ -58,6 +58,8 @@ GEM
       warden (~> 1.2.3)
     erubis (2.7.0)
     execjs (2.0.2)
+    friendly_id (5.0.4)
+      activerecord (>= 4.0.0)
     hike (1.2.3)
     httparty (0.13.1)
       json (~> 1.8)
@@ -180,6 +182,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   colorize
   devise
+  friendly_id
   jbuilder (~> 1.2)
   jquery-rails
   less-rails

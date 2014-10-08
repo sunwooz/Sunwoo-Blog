@@ -10,6 +10,7 @@ gem 'less-rails'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'pry'
+gem 'friendly_id'
 
 gem 'unicorn-rails'
 
