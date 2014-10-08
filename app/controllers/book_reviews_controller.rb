@@ -17,11 +17,11 @@ class BookReviewsController < ApplicationController
   end
 
   def edit
-    @book_review = BookReview.find(params[:id])
+    @book_review = BookReview.friendly.find(params[:id])
   end
 
   def update
-    @book_review = BookReview.find(params[:id])
+    @book_review = BookReview.friendly.find(params[:id])
     if @book_review.update(book_review_params)
       redirect_to root_url
     else
