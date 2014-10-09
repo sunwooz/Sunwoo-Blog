@@ -26,13 +26,13 @@ class PostsController < ApplicationController
   end
 
   def update
-    post = Post.find(params[:id])
+    post = Post.friendly.find(params[:id])
     post.update_attributes!(post_params)
     redirect_to post_path(params[:id])
   end
 
   def destroy
-    post = Post.find(post_params[:id])
+    post = Post.friendly.find(post_params[:id])
     post.destroy!
     redirect_to root_url
   end
