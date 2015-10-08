@@ -5,4 +5,6 @@ SunwooBlog::Application.routes.draw do
 
   resources :posts
   resources :book_reviews
+
+  get '/about' => 'pages#about'
 end
