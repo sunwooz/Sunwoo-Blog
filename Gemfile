@@ -20,6 +20,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 1.2'
 gem 'redcarpet'
 gem 'devise'
+gem 'newrelic_rpm'
 
 gem 'markdown-rails'
 gem 'pygments.rb'
