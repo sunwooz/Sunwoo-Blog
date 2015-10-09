@@ -91,6 +91,7 @@ GEM
     minitest (4.7.5)
     multi_json (1.8.4)
     multi_xml (0.5.5)
+    newrelic_rpm (3.13.2.302)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     orm_adapter (0.5.0)
@@ -187,6 +188,7 @@ DEPENDENCIES
   jquery-rails
   less-rails
   markdown-rails
+  newrelic_rpm
   nokogiri
   paperclip
   pg
