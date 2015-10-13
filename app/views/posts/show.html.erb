@@ -7,6 +7,7 @@
 
 <% if @post.image.url != "/images/original/missing.png" %>
   <div class="hero-image img-responsive" style="background: url(<%= @post.image.url(:large) %>); background-position: center;">
+  	<h1 id="post-title"><%= @post.title %></h1>
 
 	<!-- if the user has javascript disabled they can still use the menu -->
 	<noscript>
@@ -35,7 +36,6 @@
 		<p class="meta">
 			<a class="" href="category.html">Sunwoo Yang</a><a class="" href="category.html"></a> <i class="link-spacer"></i> <i class="entypo-bookmark"></i> <%= (@post.content.split.size / 200.0).ceil %> minutes
 		</p>
-		<h1><%= @post.title %></h1>
 
 		<p class="subtitle"><%=raw @post.body_html %></p>
 
