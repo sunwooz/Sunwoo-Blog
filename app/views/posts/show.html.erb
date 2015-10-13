@@ -11,10 +11,10 @@
 	<!-- if the user has javascript disabled they can still use the menu -->
 	<noscript>
 	  <div class="no-js-menu">
-		<ul>
-		  <li><i class="entypo-home"></i><a href="/">Home</a></li>
-		  <li><i class="entypo-chart-area"></i><a href="dashboard.html">Stats</a></li>
-		</ul>
+			<ul>
+			  <li><i class="entypo-home"></i><a href="/">Home</a></li>
+			  <li><i class="entypo-chart-area"></i><a href="dashboard.html">Stats</a></li>
+			</ul>
 	  </div>
 	</noscript>
 	<!-- end no script -->
@@ -38,6 +38,17 @@
 		<h1><%= @post.title %></h1>
 
 		<p class="subtitle"><%=raw @post.body_html %></p>
+
+		<h1>Subscribe for Juicy Updates!</h1>
+
+		<%= form_for(Subscriber.new) do |f| %>
+			<div class="form-group">
+				<%= f.label :email %><br>
+				<%= f.text_field :email, style: 'line-height: 10px;' %>
+			</div>
+
+			<%= f.submit "Subscribe!", class: 'btn btn-success' %>
+		<% end %>
 
 	</div><!-- main-content/col -->
 

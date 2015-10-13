@@ -27,6 +27,12 @@
     <script data-cfasync="false" type="text/javascript" src="//filamentapp.s3.amazonaws.com/59fd1d7202b87708499b14de51b8e9a1.js" async="async"></script>
   </head>
   <body>
+    <% if flash[:alert] %>
+      <p class="flash-error"><%= flash[:alert] %></p>
+    <% end %>
+    <% if flash[:notice] %>
+      <p class="flash-notice"><%= flash[:notice] %></p>
+    <% end %>
 
     <%= yield %>
 

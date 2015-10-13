@@ -11,6 +11,7 @@ gem 'paperclip'
 gem 'aws-sdk'
 gem 'pry'
 gem 'friendly_id'
+gem 'email_validator'
 
 gem 'unicorn-rails'
 
