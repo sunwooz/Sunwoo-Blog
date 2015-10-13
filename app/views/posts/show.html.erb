@@ -43,14 +43,16 @@
 		<p class="subtitle"><%=raw @post.body_html %></p>
 
 		<h1>Subscribe to follow me on my Haphazard Journey</h1>
+		<br>
+		<br>
 
 		<%= form_for(Subscriber.new) do |f| %>
-			<div class="form-group">
+			<div class="form-group" id="email_text_field">
 				<%= f.label :email %><br>
-				<%= f.text_field :email, style: 'line-height: 10px;' %>
+				<%= f.text_field :email, style: 'line-height: 10px; padding: 10px; border-radius: 5px; color: black;' %>
 			</div>
 
-			<%= f.submit "Subscribe!", class: 'btn btn-success' %>
+			<%= f.submit "Receive Updates When I Post Something New!", class: 'btn btn-success' %>
 		<% end %>
 
 	</div><!-- main-content/col -->
