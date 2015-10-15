@@ -37,7 +37,10 @@
 			<% if @post.image.url == '/images/original/missing.png' %>
 				<h1><%= @post.title %></h1>
 			<% end %>
-			<a class="" href="category.html">Sunwoo Yang</a><a class="" href="category.html"></a> <i class="link-spacer"></i> <i class="entypo-bookmark"></i> <%= (@post.content.split.size / 200.0).ceil %> minutes
+			<a class="" href="category.html">Sunwoo Yang</a><a class="" href="category.html"></a> <i class="link-spacer"></i> <i class="entypo-bookmark"></i> <%= (@post.content.split.size / 200.0).ceil %> minutes to read
+			<p class="meta">Written <%= @post.created_at.strftime("%A, %d %b %Y") %></p>
+
+			<!-- DateTime.new(@post.created_at).strftime("%A, %d %b %Y") -->
 		</p>
 
 		<p class="subtitle"><%=raw @post.body_html %></p>
