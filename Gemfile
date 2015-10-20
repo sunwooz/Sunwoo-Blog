@@ -12,6 +12,7 @@ gem 'aws-sdk'
 gem 'pry'
 gem 'friendly_id'
 gem 'email_validator'
+gem 'mailcatcher'
 
 gem 'unicorn-rails'
 

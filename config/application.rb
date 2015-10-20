@@ -8,6 +8,12 @@ Bundler.require(:default, Rails.env)
 
 module SunwooBlog
   class Application < Rails::Application
+    def secrets
+      @secrets ||= begin
+        yaml = YAML.load(File.open("#{Rails.root}/config/secrets.yml"))[Rails.env]
+        ActiveSupport::OrderedOptions.new.merge!(yaml.symbolize_keys)
+      end
+    end
     config.assets.enabled = true
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
@@ -20,5 +26,6 @@ module SunwooBlog
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.secret_key_base = YAML.load(File.open("#{Rails.root}/config/secrets.yml"))[Rails.env]['secret_key_base']
   end
 end
