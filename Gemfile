@@ -4,10 +4,14 @@ gem 'rails', '4.0.2'
 gem 'sass-rails', '~> 4.0.0'
 # gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
-gem 'pg', :group => :production
 
 group :development do
   gem 'sqlite3'
+end
+
+group :production do
+  gem 'rails_12factor'
+  gem 'pg'
 end
 
 gem 'less-rails'
