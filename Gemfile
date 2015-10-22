@@ -10,7 +10,6 @@ group :development do
   gem 'sqlite3'
 end
 
-gem 'sqlite3', :group => :development
 gem 'less-rails'
 gem 'paperclip'
 gem 'aws-sdk'
