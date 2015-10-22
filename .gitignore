@@ -18,3 +18,5 @@
 /public/system/posts/images
 
 /config/secrets.yml
+
+.DS_Store

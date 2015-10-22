@@ -5,14 +5,15 @@ gem 'sass-rails', '~> 4.0.0'
 # gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
 
-group :development do
-  gem 'sqlite3'
-end
-
 group :production do
   gem 'rails_12factor'
-  gem 'pg'
 end
+
+group :development do
+  gem 'mailcatcher'
+end
+
+gem 'pg'
 
 gem 'less-rails'
 gem 'paperclip'
@@ -20,8 +21,6 @@ gem 'aws-sdk'
 gem 'pry'
 gem 'friendly_id'
 gem 'email_validator'
-gem 'mailcatcher'
-
 gem 'unicorn-rails'
 
 gem 'uglifier', '>= 1.3.0'
