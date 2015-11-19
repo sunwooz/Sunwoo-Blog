@@ -5,6 +5,7 @@ class Post < ActiveRecord::Base
   before_save :generate_body_html
 
   has_attached_file :image, styles: { large: "1555×1037" }
+  validates_attachment_content_type :image, :content_type => ["image/jpg", "image/jpeg", "image/png", "image/gif"]
 
   def generate_body_html
     return if self.content.blank?

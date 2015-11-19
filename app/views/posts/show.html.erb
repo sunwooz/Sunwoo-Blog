@@ -49,7 +49,7 @@
 		<br>
 		<br>
 
-		<%= form_for(Subscriber.new) do |f| %>
+		<%= form_for(Subscriber.new, class: 'email-form') do |f| %>
 			<div class="form-group" id="email_text_field">
 				<%= f.label :email %><br>
 				<%= f.text_field :email, style: 'line-height: 10px; padding: 10px; border-radius: 5px; color: black;' %>
