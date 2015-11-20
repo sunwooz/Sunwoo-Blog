@@ -14,6 +14,7 @@ group :development do
 end
 
 gem 'pg'
+gem 'puma'
 
 gem 'less-rails'
 gem 'paperclip'

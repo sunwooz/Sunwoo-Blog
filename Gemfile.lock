@@ -119,6 +119,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    puma (2.15.3)
     pygments.rb (0.6.3)
       posix-spawn (~> 0.3.6)
       yajl-ruby (~> 1.2.0)
@@ -226,6 +227,7 @@ DEPENDENCIES
   paperclip
   pg
   pry
+  puma
   pygments.rb
   quiet_assets
   rails (= 4.0.2)
