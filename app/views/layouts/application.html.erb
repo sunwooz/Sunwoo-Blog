@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ideas to Customers | Sunwoo Yang</title>
+    <% if @post %>
+      <title><%= @post.title %> | Sunwoo Yang</title>
+    <% else %>
+      <title>Ideas to Customers | Sunwoo Yang</title>
+    <% end %>
     <!-- Fonts -->
     <%= stylesheet_link_tag    "application", media: "all" %>
     <%= javascript_include_tag "application" %>
