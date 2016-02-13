@@ -11,10 +11,12 @@ end
 
 group :development do
   gem 'mailcatcher'
+  gem 'capistrano'
+  gem 'rvm-capistrano'
+  gem 'net-ssh', '2.7.0'
 end
 
 gem 'pg'
-gem 'puma'
 
 gem 'less-rails'
 gem 'paperclip'
