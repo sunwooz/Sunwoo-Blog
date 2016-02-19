@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.1.0'
 
 gem 'rails', '4.0.2'
 gem 'sass-rails', '~> 4.0.0'
@@ -9,14 +10,18 @@ group :production do
   gem 'rails_12factor'
 end
 
-group :development do
+group :development, :production do
   gem 'mailcatcher'
-  gem 'capistrano'
-  gem 'rvm-capistrano'
+  gem 'capistrano',         require: false
+  gem 'capistrano-rvm',     require: false
+  gem 'capistrano-rails',   require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma',   require: false
   gem 'net-ssh', '2.7.0'
 end
 
 gem 'pg'
+gem 'puma'
 
 gem 'less-rails'
 gem 'paperclip'
