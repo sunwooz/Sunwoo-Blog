@@ -1,0 +1,129 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => "Ada", :name => "description"}/
+    %meta{:content => "Paul Laros", :name => "author"}/
+    %link{:href => "favicon.ico", :rel => "shortcut icon"}/
+    %title Ada
+    / Fonts
+    %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700italic,800,800italic,700,600italic", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Merriweather", :rel => "stylesheet"}/
+    / HTML5 shiv for IE8 support
+    /[if lt IE 9]
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  %body
+    .loading
+    #header
+      .top
+        .search
+          %form{:role => "form"}
+            .form-group.has-feedback
+              %input.form-control.input-sm{:placeholder => "Search..", :type => "text"}/
+              %i.form-control-feedback.fa.fa-search
+        %a.brand{:href => "#"}
+          %span Sunwoo
+      %nav.navbar.navbar-ada{:role => "navigation"}
+        .navbar-header
+          %button.navbar-toggle{"data-target" => "#navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+        #navbar-collapse-1.collapse.navbar-collapse.navbar-ex1-collapse
+          %ul.nav.navbar-nav
+            %li.dropdown
+              %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                Home
+                %span.caret
+              %ul.dropdown-menu.active
+                %li
+                  %a{:href => "home-masonry.html"} Masonry
+                %li
+                  %a{:href => "home-featured-post.html"} Featured post
+                %li
+                  %a{:href => "home-sidebar.html"} Sidebar
+                %li
+                  %a{:href => "home-full-width.html"} Full width
+                %li.divider
+                %li
+                  %a{:href => "index.html"} Landing page
+            %li.dropdown
+              %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                Posts
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "post-image.html"} Post + Image
+                %li
+                  %a{:href => "post-video.html"} Post + Video
+            %li.dropdown
+              %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                Pages
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "page-about.html"} About
+                %li
+                  %a{:href => "page-contact.html"} Contact
+                %li
+                  %a{:href => "page-404.html"} 404
+            %li.dropdown
+              %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                Elements
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "doc-typography.html"} Typography
+                %li
+                  %a{:href => "doc-buttons.html"} Buttons
+                %li
+                  %a{:href => "doc-tables.html"} Tables
+                %li
+                  %a{:href => "doc-forms.html"} Forms
+                %li
+                  %a{:href => "doc-panels.html"} Panels
+            %li
+              %a{:href => "https://wrapbootstrap.com/theme/ada-personal-blog-template-WB0T99698", :target => "_blank"} Buy it now
+        / /.navbar-collapse
+    = render "posts/all_posts"
+      
+    #footer
+      #subscribe
+        .container
+          .form-inline
+            .form-group
+              %p Stay updated on latest updates & promotions
+            .form-group
+              .input-group
+                %input.form-control{:placeholder => "Your email address", :type => "text"}/
+                %span.input-group-btn
+                  %button.btn.btn-ada-dark{:type => "button"} Subscribe
+      #links
+        .container
+          .col-sm-2
+            %p.brand
+              %span VDV
+          .col-sm-8
+            %ul.list-inline
+              %li
+                %a{:href => "home-masonry.html"} Home
+              %li
+                %a{:href => "page-about.html"} About
+              %li
+                %a{:href => "page-contact.html"} Contact
+          .col-md-2
+            %ul.list-inline
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-facebook
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-twitter
+              %li
+                %a{:href => "#"}
+                  %i.fa.fa-instagram
+    %a#scroll-to-top
+      %i.fa.fa-angle-up

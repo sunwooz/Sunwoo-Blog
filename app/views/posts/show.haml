@@ -1,0 +1,41 @@
+%span.menu-trigger.writer-icon.animated.fadeInDown
+  %span.bar
+  %span.bar
+  %span.bar
+- if @post.image.url != "/images/original/missing.png"
+  .hero-image.img-responsive{:style => "background: url(#{@post.image.url(:large)}); background-position: center;"}
+    %h1#post-title= @post.title
+    / if the user has javascript disabled they can still use the menu
+    %noscript
+      .no-js-menu
+        %ul
+          %li
+            %i.entypo-home
+            %a{:href => "/"} Home
+          %li
+            %i.entypo-chart-area
+            %a{:href => "dashboard.html"} Stats
+    / end no script
+.container
+  .row
+    #menu
+      %ul
+        %li
+          %i.entypo-home
+          %a{:href => "/"} Home
+    .col-xs-12.main-content.single-content
+      %p.meta
+        - if @post.image.url == '/images/original/missing.png'
+          %h1= @post.title
+        %a{:href => "category.html"} Sunwoo Yang
+        %a{:href => "category.html"}
+        %i.link-spacer
+        %i.entypo-bookmark
+        = (@post.content.split.size / 200.0).ceil
+        minutes to read
+      %p.meta
+        Written #{@post.created_at.strftime("%A, %d %b %Y")}
+      / DateTime.new(@post.created_at).strftime("%A, %d %b %Y")
+      %p.subtitle= raw @post.body_html
+    / main-content/col
+  / /row

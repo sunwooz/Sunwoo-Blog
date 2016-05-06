@@ -1,0 +1,15 @@
+- @posts.each do |post|
+  #posts.container
+    %section.col-md-12.wow.fadeIn
+      .post.big
+        .row
+          .col-md-6.media
+            = image_tag(post.image.url, class: 'img-responsive')
+          .col-md-6.caption
+            %span.post-tag #music
+            = link_to post.title, post, class: '.post-title'
+            %span.post-date= post.created_at
+            %p.post-description
+              = post.content[0..200]
+              = link_to 'read more...', post
+

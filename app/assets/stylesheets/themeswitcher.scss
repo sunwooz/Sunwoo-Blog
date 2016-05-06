@@ -1,0 +1,85 @@
+//colors
+$color_tuatara_approx: #383838;
+$white: #fff;
+$color_crusta_approx: #ff7c26;
+$color_caribbean_green_approx: #00c5a1;
+$color_coral_red_approx: #f9423a;
+$color_picton_blue_approx: #3da7ff;
+$color_cerise_red_approx: #eb2b65;
+$color_gold_approx: #ffd500;
+$color_electric_violet_approx: #8b26ff;
+$color_japanese_laurel_approx: #008000;
+$azure_radiance: #007fff;
+$color_shuttle_gray_approx: #536872;
+
+.themeswitcher {
+	position: fixed;
+	left: -140px;
+	top: 110px;
+	background: $color_tuatara_approx;
+	width: 180px;
+	height: 44px;
+	z-index: 1;
+	//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+	border-radius: 0 5px 5px 0;
+	color: $white;
+	.toggle {
+		float: right;
+		font-size: 1.7em;
+		margin: 5px 10px;
+		cursor: pointer;
+		color: $white;
+	}
+	&.open {
+		left: 0;
+		height: 114px;
+		.colors {
+			display: block;
+		}
+	}
+	.colors {
+		margin: 18px 10px 10px;
+		display: none;
+		.color {
+			border: 1px solid $white;
+			margin: 2px;
+			width: 24px;
+			height: 24px;
+			background: $white;
+			//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+			border-radius: 0;
+			display: inline-block;
+			padding: 0;
+			&.orange {
+				background: $color_crusta_approx;
+			}
+			&.green {
+				background: $color_caribbean_green_approx;
+			}
+			&.red {
+				background: $color_coral_red_approx;
+			}
+			&.blue {
+				background: $color_picton_blue_approx;
+			}
+			&.pink {
+				background: $color_cerise_red_approx;
+			}
+			&.yellow {
+				background: $color_gold_approx;
+			}
+			&.purple {
+				background: $color_electric_violet_approx;
+			}
+			&.army {
+				background: $color_japanese_laurel_approx;
+			}
+			&.azure {
+				background: $azure_radiance;
+			}
+			&.cadet {
+				background: $color_shuttle_gray_approx;
+			}
+		}
+	}
+}

@@ -1,0 +1,134 @@
+//colors
+$color_crusta_approx: #ff7c26;
+$color_malachite_approx: #1ecc3e;
+$color_torch_red_approx: #ff2626;
+$color_picton_blue_approx: #3da7ff;
+$color_razzle_dazzle_rose_approx: #ff26e9;
+$color_gold_approx: #ffd500;
+$color_electric_violet_approx: #8b26ff;
+$color_japanese_laurel_approx: #008000;
+$azure_radiance: #007fff;
+$color_shuttle_gray_approx: #536872;
+
+body {
+	&.orange {
+		a {
+			color: $color_crusta_approx;
+			color: $color_crusta_approx;
+		}
+		.post-tag {
+			color: $color_crusta_approx;
+		}
+		.brand span:hover {
+			color: $color_crusta_approx;
+		}
+	}
+	&.green {
+		a {
+			color: $color_malachite_approx;
+			color: $color_malachite_approx;
+		}
+		.post-tag {
+			color: $color_malachite_approx;
+		}
+		.brand span:hover {
+			color: $color_malachite_approx;
+		}
+	}
+	&.red {
+		a {
+			color: $color_torch_red_approx;
+			color: $color_torch_red_approx;
+		}
+		.post-tag {
+			color: $color_torch_red_approx;
+		}
+		.brand span:hover {
+			color: $color_torch_red_approx;
+		}
+	}
+	&.blue {
+		a {
+			color: $color_picton_blue_approx;
+			color: $color_picton_blue_approx;
+		}
+		.post-tag {
+			color: $color_picton_blue_approx;
+		}
+		.brand span:hover {
+			color: $color_picton_blue_approx;
+		}
+	}
+	&.pink {
+		a {
+			color: $color_razzle_dazzle_rose_approx;
+			color: $color_razzle_dazzle_rose_approx;
+		}
+		.post-tag {
+			color: $color_razzle_dazzle_rose_approx;
+		}
+		.brand span:hover {
+			color: $color_razzle_dazzle_rose_approx;
+		}
+	}
+	&.yellow {
+		a {
+			color: $color_gold_approx;
+			color: $color_gold_approx;
+		}
+		.post-tag {
+			color: $color_gold_approx;
+		}
+		.brand span:hover {
+			color: $color_gold_approx;
+		}
+	}
+	&.purple {
+		a {
+			color: $color_electric_violet_approx;
+			color: $color_electric_violet_approx;
+		}
+		.post-tag {
+			color: $color_electric_violet_approx;
+		}
+		.brand span:hover {
+			color: $color_electric_violet_approx;
+		}
+	}
+	&.army {
+		a {
+			color: $color_japanese_laurel_approx;
+			color: $color_japanese_laurel_approx;
+		}
+		.post-tag {
+			color: $color_japanese_laurel_approx;
+		}
+		.brand span:hover {
+			color: $color_japanese_laurel_approx;
+		}
+	}
+	&.azure {
+		a {
+			color: $azure_radiance;
+			color: $azure_radiance;
+		}
+		.post-tag {
+			color: $azure_radiance;
+		}
+		.brand span:hover {
+			color: $azure_radiance;
+		}
+	}
+	&.cadet {
+		a {
+			color: $color_shuttle_gray_approx;
+			color: $color_shuttle_gray_approx;
+		}
+		.post-tag {
+			color: $color_shuttle_gray_approx;
+		}
+		.brand span:hover {
+			color: $color_shuttle_gray_approx;
+		}
+	}
+}

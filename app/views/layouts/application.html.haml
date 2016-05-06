@@ -1,0 +1,39 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    - if @post
+      %title
+        = @post.title
+        | Sunwoo Yang
+    - else
+      %title Ideas to Customers | Sunwoo Yang
+    / Fonts
+    = stylesheet_link_tag    "application", media: "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+    / META DATA
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0", :name => "viewport"}/
+    %meta{:content => "yes", :name => "apple-mobile-web-app-capable"}/
+    %meta{:content => "black", :name => "apple-mobile-web-app-status-bar-style"}/
+    %meta{:content => "summary", :name => "twitter:card"}/
+    %meta{:content => "@sunwooz", :name => "twitter:site"}/
+    %meta{:content => "@sunwooz", :name => "twitter:creator"}/
+    %script{:async => "async", "data-cfasync" => "false", :src => "//filamentapp.s3.amazonaws.com/59fd1d7202b87708499b14de51b8e9a1.js", :type => "text/javascript"}
+    %link{:href => "https://fonts.googleapis.com/css?family=Kalam:700", :rel => "stylesheet", :type => "text/css"}/
+    %script{:async => "async", "data-sumo-site-id" => "7ee7b068ed4841c86d889e8bbdc978047091531355f4226434ddedfbdbf1df59", :src => "//load.sumome.com/"}
+  %body
+    - if flash[:alert]
+      %p.flash-error= flash[:alert]
+    - if flash[:notice]
+      %p.flash-notice= flash[:notice]
+    = yield
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-48335587-1', 'sunwooyang.com');
+      ga('send', 'pageview');
