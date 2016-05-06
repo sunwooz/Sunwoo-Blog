@@ -26,3 +26,4 @@
 !.elasticbeanstalk/*.global.yml
 
 rootkey.csv
+dump.csv
