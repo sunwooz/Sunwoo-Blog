@@ -32,7 +32,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    post = Post.friendly.find(post_params[:id])
+    post = Post.friendly.find(params[:id])
     post.destroy!
     redirect_to root_url
   end
