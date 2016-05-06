@@ -13,14 +13,12 @@ end
 
 gem 'pg'
 gem 'puma'
-gem 'sshkit', github: 'capistrano/sshkit'
 gem 'less-rails'
 gem 'paperclip'
 gem 'pry'
 gem 'friendly_id'
 gem 'email_validator'
 gem 'unicorn-rails'
-
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
@@ -28,10 +26,8 @@ gem 'jbuilder', '~> 1.2'
 gem 'redcarpet'
 gem 'devise'
 gem 'newrelic_rpm'
-
 gem 'markdown-rails'
 gem 'pygments.rb'
 gem 'nokogiri'
 gem 'quiet_assets', :group => :development
-
 gem 'colorize'
