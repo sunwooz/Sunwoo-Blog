@@ -1,39 +1,158 @@
 !!!
-%html
+%html{:lang => "en"}
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     - if @post
       %title
         = @post.title
         | Sunwoo Yang
     - else
       %title Ideas to Customers | Sunwoo Yang
-    / Fonts
     = stylesheet_link_tag    "application", media: "all"
+    %link{ rel: 'stylesheet', type: 'text/css', href: 'animate.css' }
     = javascript_include_tag "application"
     = csrf_meta_tags
-    / META DATA
     %meta{:charset => "utf-8"}/
-    %meta{:content => "width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0", :name => "viewport"}/
-    %meta{:content => "yes", :name => "apple-mobile-web-app-capable"}/
-    %meta{:content => "black", :name => "apple-mobile-web-app-status-bar-style"}/
-    %meta{:content => "summary", :name => "twitter:card"}/
-    %meta{:content => "@sunwooz", :name => "twitter:site"}/
-    %meta{:content => "@sunwooz", :name => "twitter:creator"}/
-    %script{:async => "async", "data-cfasync" => "false", :src => "//filamentapp.s3.amazonaws.com/59fd1d7202b87708499b14de51b8e9a1.js", :type => "text/javascript"}
-    %link{:href => "https://fonts.googleapis.com/css?family=Kalam:700", :rel => "stylesheet", :type => "text/css"}/
-    %script{:async => "async", "data-sumo-site-id" => "7ee7b068ed4841c86d889e8bbdc978047091531355f4226434ddedfbdbf1df59", :src => "//load.sumome.com/"}
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %meta{:content => "Ada", :name => "description"}/
+    %meta{:content => "Paul Laros", :name => "author"}/
+    %link{:href => "favicon.ico", :rel => "shortcut icon"}/
+    %title Ada
+    / Fonts
+    %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700italic,800,800italic,700,600italic", :rel => "stylesheet"}/
+    %link{:href => "https://fonts.googleapis.com/css?family=Merriweather", :rel => "stylesheet"}/
+    / HTML5 shiv for IE8 support
+    /[if lt IE 9]
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   %body
+    .loading
+    #header
+      .top
+        .search
+          %form{:role => "form"}
+            .form-group.has-feedback
+              %input.form-control.input-sm{:placeholder => "Search..", :type => "text"}/
+              %i.form-control-feedback.fa.fa-search
+        %a.brand{:href => "/"}
+          %span Sunwoo
+        .slogan 
+          Blog on 
+          %span.tag #software, 
+          %span.tag #entrepreneurship 
+          &
+          %span.tag #travel
+      %nav.navbar.navbar-ada{:role => "navigation"}
+        .navbar-header
+          %button.navbar-toggle{"data-target" => "#navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+            %span.sr-only Toggle navigation
+            %span.icon-bar
+            %span.icon-bar
+            %span.icon-bar
+        #navbar-collapse-1.collapse.navbar-collapse.navbar-ex1-collapse
+          %ul.nav.navbar-nav
+            %li.dropdown
+              %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                Home
+                %span.caret
+              %ul.dropdown-menu.active
+                %li
+                  %a{:href => "home-masonry.html"} Masonry
+                %li
+                  %a{:href => "home-featured-post.html"} Featured post
+                %li
+                  %a{:href => "home-sidebar.html"} Sidebar
+                %li
+                  %a{:href => "home-full-width.html"} Full width
+                %li.divider
+                %li
+                  %a{:href => "index.html"} Landing page
+            %li.dropdown
+              %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                Posts
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "post-image.html"} Post + Image
+                %li
+                  %a{:href => "post-video.html"} Post + Video
+            %li.dropdown
+              %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                Pages
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "page-about.html"} About
+                %li
+                  %a{:href => "page-contact.html"} Contact
+                %li
+                  %a{:href => "page-404.html"} 404
+            %li.dropdown
+              %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                Elements
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "doc-typography.html"} Typography
+                %li
+                  %a{:href => "doc-buttons.html"} Buttons
+                %li
+                  %a{:href => "doc-tables.html"} Tables
+                %li
+                  %a{:href => "doc-forms.html"} Forms
+                %li
+                  %a{:href => "doc-panels.html"} Panels
+            %li
+              %a{:href => "https://wrapbootstrap.com/theme/ada-personal-blog-template-WB0T99698", :target => "_blank"} Buy it now
+
     - if flash[:alert]
       %p.flash-error= flash[:alert]
     - if flash[:notice]
       %p.flash-notice= flash[:notice]
     = yield
-    :javascript
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-48335587-1', 'sunwooyang.com');
-      ga('send', 'pageview');
+    #footer
+    #subscribe
+      .container
+        .form-inline
+          .form-group
+            %p Stay updated on latest updates & promotions
+          .form-group
+            .input-group
+              %input.form-control{:placeholder => "Your email address", :type => "text"}/
+              %span.input-group-btn
+                %button.btn.btn-ada-dark{:type => "button"} Subscribe
+    #links
+      .container
+        .col-sm-2
+          %p.brand
+            %span VDV
+        .col-sm-8
+          %ul.list-inline
+            %li
+              %a{:href => "home-masonry.html"} Home
+            %li
+              %a{:href => "page-about.html"} About
+            %li
+              %a{:href => "page-contact.html"} Contact
+        .col-md-2
+          %ul.list-inline
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-facebook
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-twitter
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-instagram
+  %a#scroll-to-top
+    %i.fa.fa-angle-up
+
+:javascript
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-48335587-1', 'sunwooyang.com');
+  ga('send', 'pageview');

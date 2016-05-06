@@ -1,41 +1,27 @@
-%span.menu-trigger.writer-icon.animated.fadeInDown
-  %span.bar
-  %span.bar
-  %span.bar
-- if @post.image.url != "/images/original/missing.png"
-  .hero-image.img-responsive{:style => "background: url(#{@post.image.url(:large)}); background-position: center;"}
-    %h1#post-title= @post.title
-    / if the user has javascript disabled they can still use the menu
-    %noscript
-      .no-js-menu
-        %ul
-          %li
-            %i.entypo-home
-            %a{:href => "/"} Home
-          %li
-            %i.entypo-chart-area
-            %a{:href => "dashboard.html"} Stats
-    / end no script
-.container
-  .row
-    #menu
-      %ul
-        %li
-          %i.entypo-home
-          %a{:href => "/"} Home
-    .col-xs-12.main-content.single-content
-      %p.meta
-        - if @post.image.url == '/images/original/missing.png'
+#single
+  .container
+    .post
+      .caption
+        .header
+          %span.post-tag #music
           %h1= @post.title
-        %a{:href => "category.html"} Sunwoo Yang
-        %a{:href => "category.html"}
-        %i.link-spacer
-        %i.entypo-bookmark
-        = (@post.content.split.size / 200.0).ceil
-        minutes to read
-      %p.meta
-        Written #{@post.created_at.strftime("%A, %d %b %Y")}
-      / DateTime.new(@post.created_at).strftime("%A, %d %b %Y")
-      %p.subtitle= raw @post.body_html
-    / main-content/col
-  / /row
+        %p= raw @post.body_html
+    
+    .comments
+      / START DISQUS
+      #disqus_thread
+      :javascript
+        /* * * CONFIGURATION VARIABLES * * */
+        var disqus_shortname = 'adabootstrap';
+        
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+      %noscript
+        Please enable JavaScript to view the
+        %a{:href => "https://disqus.com/?ref_noscript", :rel => "nofollow"} comments powered by Disqus.
+      / END DISQUS
+
