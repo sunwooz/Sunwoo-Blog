@@ -14,6 +14,7 @@ end
 gem 'pg'
 gem 'haml-rails'
 gem 'puma'
+gem 'aws-sdk'
 gem 'paperclip'
 gem 'pry'
 gem 'friendly_id'
