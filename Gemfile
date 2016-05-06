@@ -1,14 +1,10 @@
 source 'https://rubygems.org'
-ruby '2.1.0'
+ruby '2.1.8'
 
 gem 'rails', '4.0.2'
 gem 'sass-rails', '~> 4.0.0'
 # gem 'twitter-bootstrap-rails'
 gem 'therubyracer'
-
-group :production do
-  gem 'rails_12factor'
-end
 
 group :development, :production do
   gem 'mailcatcher'
