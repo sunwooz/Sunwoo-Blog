@@ -10,6 +10,6 @@
             = link_to post.title, post, class: '.post-title'
             %span.post-date= post.created_at
             %p.post-description
-              = post.content[0..200]
+              = post.short
               = link_to 'read more...', post
 
