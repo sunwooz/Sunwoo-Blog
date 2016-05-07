@@ -4,7 +4,7 @@
       .post.big
         .row
           .col-md-6.media
-            = image_tag(post.image.url, class: 'img-responsive')
+            = image_tag(post.image.url(:large), class: 'img-responsive')
           .col-md-6.caption
             %span.post-tag #music
             = link_to post.title, post, class: 'post-title'
