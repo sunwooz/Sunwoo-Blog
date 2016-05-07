@@ -7,10 +7,10 @@
             = image_tag(post.image.url, class: 'img-responsive')
           .col-md-6.caption
             %span.post-tag #music
-            = link_to post.title, post, class: '.post-title'
+            = link_to post.title, post, class: 'post-title'
             %span.post-date= post.created_at
             %p.post-description
-              = post.short
+              = raw post.short
               = link_to 'read more...', post
             - if current_user && current_user.email == 'yangsunwoo@gmail.com'
               = link_to 'Edit', edit_post_path(post)
