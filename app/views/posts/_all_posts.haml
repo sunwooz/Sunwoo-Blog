@@ -11,7 +11,7 @@
                 = link_to "#" + tag, tag_path(tag)
 
             = link_to post.title, post, class: 'post-title'
-            %span.post-date= post.created_at
+            %span.post-date= post.created_at.strftime("%A, %b %d")
             %p.post-description
               = raw post.short
               = link_to 'read more...', post

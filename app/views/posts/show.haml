@@ -7,7 +7,11 @@
             - @post.tag_list.each do |tag|
               = link_to "#" + tag, tag_path(tag)
           %h1= @post.title
-          <i style="font-size: 1em;">Written by Sunwoo Yang</i>
+          %i{ style: "font-size: 1em;" }
+            Written by Sunwoo Yang on
+          %b
+          %i{ style: "font-size: .7em;" }
+            = @post.created_at.strftime("%A, %b %d")
         %p= raw @post.body_html
     
     .comments
