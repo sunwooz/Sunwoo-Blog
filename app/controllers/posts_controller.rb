@@ -3,7 +3,11 @@ class PostsController < ApplicationController
   before_action :authenticate_correct_user!, :except => [:index, :show]
 
   def index
-    @posts = Post.all.order("created_at DESC")
+    if params[:tag]
+      @posts = Post.tagged_with(params[:tag]).order("created_at DESC")
+    else
+      @posts = Post.all.order("created_at DESC")
+    end
     @book_reviews = BookReview.all
   end
 
@@ -44,7 +48,7 @@ class PostsController < ApplicationController
   private
 
     def post_params
-      params.require(:post).permit(:title, :content, :body_html, :image, :short) if params[:post]
+      params.require(:post).permit(:title, :content, :body_html, :image, :short, :tag_list) if params[:post]
     end
 
     def authenticate_correct_user!

@@ -1,6 +1,7 @@
 class Post < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: [:slugged]
+  acts_as_taggable
 
   before_save :generate_body_html
 

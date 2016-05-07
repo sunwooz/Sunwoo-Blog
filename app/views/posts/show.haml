@@ -3,7 +3,9 @@
     .post
       .caption
         .header
-          %span.post-tag #music
+          %span.post-tag
+            - @post.tag_list.each do |tag|
+              = link_to "#" + tag, tag_path(tag)
           %h1= @post.title
         %p= raw @post.body_html
     

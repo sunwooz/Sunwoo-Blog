@@ -8,4 +8,7 @@ SunwooBlog::Application.routes.draw do
   resources :subscribers
 
   get '/about' => 'pages#about'
+
+  #tags
+  get '/tags/:tag' => 'posts#index', as: :tag
 end
