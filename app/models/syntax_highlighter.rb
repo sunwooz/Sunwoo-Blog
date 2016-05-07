@@ -1,6 +1,6 @@
 require 'net/http'
 class SyntaxHighlighter
-  PYGMENTS_URI = 'http://pygments.appspot.com/'
+  PYGMENTS_URI = 'http://pygments.simplabs.com/'
   attr_accessor :doc
 
   def initialize(html)
