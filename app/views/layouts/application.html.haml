@@ -52,20 +52,12 @@
           %ul.nav.navbar-nav
             %li.dropdown
               %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
-                Home
+                Tags
                 %span.caret
               %ul.dropdown-menu.active
-                %li
-                  %a{:href => "home-masonry.html"} Masonry
-                %li
-                  %a{:href => "home-featured-post.html"} Featured post
-                %li
-                  %a{:href => "home-sidebar.html"} Sidebar
-                %li
-                  %a{:href => "home-full-width.html"} Full width
-                %li.divider
-                %li
-                  %a{:href => "index.html"} Landing page
+                - Post.tag_counts.each do |tag|
+                  %li
+                    = link_to tag, tag_path(tag)
             %li.dropdown
               %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
                 Posts
