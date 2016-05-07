@@ -23,3 +23,12 @@
       = f.file_field :image
       %br/
       = f.submit "Post!", class:"btn btn-lg"
+
+:javascript
+  $(document).ready(function() {
+    var postTagList = $('#post_tag_list')
+    var tagListWithSpaces = postTagList.val()
+    var replaced = tagListWithSpaces.replace(' ', ', ')
+    postTagList.val(replaced)
+  });
+  
