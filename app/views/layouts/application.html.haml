@@ -117,10 +117,11 @@
           .form-group
             %p Stay updated on latest updates & promotions
           .form-group
-            .input-group
-              %input.form-control{:placeholder => "Your email address", :type => "text"}/
-              %span.input-group-btn
-                %button.btn.btn-ada-dark{:type => "button"} Subscribe
+            = form_for(Subscriber.new) do |f|
+              .input-group
+                = f.text_field :email, class: 'form-control'
+                %span.input-group-btn
+                  = f.submit "Subscribe", class: 'btn'
     #links
       .container
         .col-sm-2
