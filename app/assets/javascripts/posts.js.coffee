@@ -1,3 +1,5 @@
+# Posts.js.coffee
+
 $ ->
   postTagList = $('#post_tag_list')
   tagListWithSpaces = postTagList.val()
