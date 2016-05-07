@@ -1,3 +1,11 @@
 .tag {
   color: #FF7C26;
 }
+
+@media(min-width: 992px) {
+  #posts .post.big .caption {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    margin: 0px !important;
+  }
+}
