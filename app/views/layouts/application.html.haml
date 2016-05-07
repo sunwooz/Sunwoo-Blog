@@ -8,14 +8,12 @@
     - else
       %title Ideas to Customers | Sunwoo Yang
     = stylesheet_link_tag    "application", media: "all"
-    %link{ rel: 'stylesheet', type: 'text/css', href: 'animate.css' }
+    %link{ rel: 'stylesheet', type: 'text/css', href: '/assets/animate.css' }
     = javascript_include_tag "application"
     = csrf_meta_tags
     %meta{:charset => "utf-8"}/
     %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
-    %meta{:content => "Ada", :name => "description"}/
-    %meta{:content => "Paul Laros", :name => "author"}/
     %link{:href => "favicon.ico", :rel => "shortcut icon"}/
     %title Ada
     / Fonts
@@ -55,6 +53,8 @@
                 Tags
                 %span.caret
               %ul.dropdown-menu.active
+                %li
+                  = link_to 'all posts', posts_path
                 - Post.tag_counts.order('name ASC').each do |tag|
                   %li
                     = link_to tag.name, tag_path(tag.name)
