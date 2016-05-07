@@ -55,7 +55,7 @@
                 Tags
                 %span.caret
               %ul.dropdown-menu.active
-                - Post.tag_counts.each do |tag|
+                - Post.tag_counts.order('name ASC').each do |tag|
                   %li
                     = link_to tag.name, tag_path(tag.name)
             %li
