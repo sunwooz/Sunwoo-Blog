@@ -252,7 +252,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws-sdk
+  aws-sdk (>= 2.0.34)
   bootstrap-sass
   coffee-rails
   colorize
