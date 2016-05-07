@@ -7,7 +7,9 @@ SunwooBlog::Application.routes.draw do
   resources :book_reviews
   resources :subscribers
 
-  get '/about' => 'pages#about'
+  get '/about' => 'pages#about', as: :about
+  get '/contact' => 'pages#contact', as: :contact
+  get '/projects' => 'pages#projects', as: :projects
 
   #tags
   get '/tags/:tag' => 'posts#index', as: :tag
