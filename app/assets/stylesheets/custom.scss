@@ -16,6 +16,10 @@ img {
   width: 100% !important;
 }
 
+h1 {
+  font-size: 1.6em !important;
+}
+
 /*about*/
 
 .post-title:hover {
@@ -33,6 +37,10 @@ img {
     padding: 14px 13px !important;
   }
 
+  .post.single-post .caption h1 {
+    font-size: 1.2em !important;
+  }
+
   h1#single-post-title {
     font-size: 1.9em;
   }
@@ -47,6 +55,8 @@ img {
     margin-bottom: 30px;
     font-weight: 300;
   }
+
+
 
   #subscribe p {
     text-align: center;
