@@ -13,6 +13,17 @@
           %i{ style: "font-size: .7em;" }
             = @post.created_at.strftime("%A, %b %d")
         %p= raw @post.body_html
+
+        #subscribe
+          .form-inline
+            .form-group
+              %p Learn to develop and market products with me!
+            .form-group
+              = form_for(Subscriber.new) do |f|
+                .input-group
+                  = f.text_field :email, class: 'form-control'
+                  %span.input-group-btn
+                    = f.submit "Subscribe", class: 'btn'
     
     .comments
       / START DISQUS
