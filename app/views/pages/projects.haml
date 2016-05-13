@@ -1,9 +1,25 @@
-#single
-  .container
-    .post.single-post
-      .caption
-        .header
-          %h1 
-            To be updated
-        %p
-          This space will house all of my projects. It is currently under construction.
+
+#posts.container
+  %section.col-md-12.wow.fadeIn
+    .post.big
+      .row
+        .col-md-6.media
+          = image_tag("https://s3.amazonaws.com/sunwooyang-blog/post-pictures/hnjs", class: 'img-responsive')
+        .col-md-6.caption
+          %h1{ class: 'post-title' }=link_to "Hacker News Job Search", "http://production-hnjs.us-east-1.elasticbeanstalk.com/", target: "_blank"
+          %p.post-description
+            A job search engine that scrapes everything from HackerNews.  There's a rails rake task being run by a cron job every hour to pull in the latest jobs. Made a custom search engine ontop of postgresql using vector search since I'm too cheap to pay for sunspot.
+
+            Uses Rails, Postgresql, AWS
+
+
+#posts.container
+  %section.col-md-12.wow.fadeIn
+    .post.big
+      .row
+        .col-md-6.media
+          = image_tag("http://clearwaterbeachassoc.com/wp-content/uploads/2016/01/Under-construction.png", class: 'img-responsive')
+        .col-md-6.caption
+          %h1{ class: 'post-title' } Under Construction
+          %p.post-description
+            I'm currently moving all of my projects from Heroku to AWS to save on costs and learn to deploy somewhere new. This page will be updated soon. By the way, I'm currently looking for a web development job in NYC. My contact information is under /contact
