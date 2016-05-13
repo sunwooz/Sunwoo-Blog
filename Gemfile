@@ -2,7 +2,6 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.2.3'
 gem 'sass-rails'
-# gem 'twitter-bootstrap-rails'
 gem 'bootstrap-sass'
 gem 'therubyracer'
 
@@ -13,11 +12,11 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'pg'
 end
 
 gem 'acts-as-taggable-on'
 gem 'compass'
-gem 'pg'
 gem 'haml-rails'
 gem 'puma'
 gem 'aws-sdk-v1'
