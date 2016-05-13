@@ -7,8 +7,10 @@
           = image_tag("https://s3.amazonaws.com/sunwooyang-blog/post-pictures/hnjs", class: 'img-responsive')
         .col-md-6.caption
           %h1{ class: 'post-title' }=link_to "Hacker News Job Search", "http://production-hnjs.us-east-1.elasticbeanstalk.com/", target: "_blank"
+          %span.post-tag
+            Made in 2014
           %p.post-description
-            A job search engine that scrapes everything from HackerNews.  There's a rails rake task being run by a cron job every hour to pull in the latest jobs. Made a custom search engine ontop of postgresql using vector search since I'm too cheap to pay for sunspot.
+            A job search engine that scrapes everything from HackerNews.  There's a rails rake task being run by a cron job every hour to pull in the latest jobs. Made a quick custom search engine ontop of postgresql using vector search.  This was the first web app I made after joining Flatiron School.
 
             Uses Rails, Postgresql, AWS
 
