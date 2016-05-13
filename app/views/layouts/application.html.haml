@@ -20,6 +20,13 @@
     %link{:href => "https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700italic,800,800italic,700,600italic", :rel => "stylesheet"}/
     %link{:href => "https://fonts.googleapis.com/css?family=Merriweather", :rel => "stylesheet"}/
     %meta{ name: "google-site-verification", content: "vPOjeAcHdaY7gZPoud_XgqSeSuS5wTxsANHvgi3LNIQ" }
+    - if @post
+      %meta{ name: "twitter:card", content: "summary_large_image" }
+      %meta{ name: "twitter:site", content: "@sunwooz" }
+      %meta{ name: "twitter:creator", content: "@sunwooz" }
+      %meta{ name: "twitter:title", content: "#{@post.title}" }
+      %meta{ name: "twitter:description", content: "#{@post.short}"}
+      %meta{ name: "twitter:image", content: "#{@post.image.url}" }
     / HTML5 shiv for IE8 support
     /[if lt IE 9]
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
