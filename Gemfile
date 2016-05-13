@@ -11,6 +11,10 @@ group :development, :production do
   gem 'net-ssh', '2.9.2'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 gem 'acts-as-taggable-on'
 gem 'compass'
 gem 'pg'
