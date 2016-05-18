@@ -6,8 +6,11 @@ gem 'bootstrap-sass'
 gem 'therubyracer'
 
 group :development, :production do
-  gem 'mailcatcher'
   gem 'net-ssh', '2.9.2'
+end
+
+group :development do
+  gem 'mailcatcher'
 end
 
 gem 'pg'
