@@ -21,6 +21,7 @@
             .form-group
               = form_for(Subscriber.new) do |f|
                 .input-group
+                  = f.hidden_field :source, value: @post.title
                   = f.text_field :email, class: 'form-control'
                   %span.input-group-btn
                     = f.submit "Subscribe", class: 'btn', onclick: "ga('send', 'event', 'Subscribe', 'Click', 'Subscribe');"
