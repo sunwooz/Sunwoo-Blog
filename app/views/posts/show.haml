@@ -23,7 +23,7 @@
                 .input-group
                   = f.text_field :email, class: 'form-control'
                   %span.input-group-btn
-                    = f.submit "Subscribe", class: 'btn'
+                    = f.submit "Subscribe", class: 'btn', onclick: "ga('send', 'event', 'Subscribe', 'Click', 'Subscribe');"
     
     .comments
       / START DISQUS
