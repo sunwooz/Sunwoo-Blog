@@ -10,6 +10,10 @@ group :development, :production do
   gem 'net-ssh', '2.9.2'
 end
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development do
   gem 'mailcatcher'
 end
