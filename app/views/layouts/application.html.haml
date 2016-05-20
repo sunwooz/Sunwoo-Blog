@@ -7,7 +7,15 @@
         | Sunwoo Yang
     - else
       %title Ideas to Customers | Sunwoo Yang
-    %script{ src: "https://cdn.optimizely.com/js/5899912648.js" }
+    :javascript
+      (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:213213,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
     %script{ :src => "//load.sumome.com/", :data => { "sumo-site-id" => "7ee7b068ed4841c86d889e8bbdc978047091531355f4226434ddedfbdbf1df59" }, :async => "async" }
     = stylesheet_link_tag    "application", media: "all"
     %link{ rel: 'stylesheet', type: 'text/css', href: '/assets/animate.css' }
