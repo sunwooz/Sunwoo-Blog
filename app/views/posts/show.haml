@@ -14,18 +14,22 @@
             = @post.created_at.strftime("%A, %b %d")
         %p= raw @post.body_html
 
-        #subscribe
-          .form-inline
-            .form-group
-              %p Learn to develop and market products with me!
-            .form-group
-              = form_for(Subscriber.new) do |f|
-                .input-group
-                  = f.hidden_field :source, value: @post.title
-                  = f.text_field :email, class: 'form-control'
-                  %span.input-group-btn
-                    = f.submit "Subscribe", class: 'btn', onclick: "ga('send', 'event', 'Subscribe', 'Click', 'Subscribe');"
-    
+        #related-posts
+        
+        - if @post.tag_list.include?('coming-soon')
+
+          #subscribe
+            .form-inline
+              .form-group
+                %p Get notified when this post is ready!
+              .form-group
+                = form_for Subscriber.new, remote: true do |f|
+                  .input-group
+                    = f.hidden_field :source, value: @post.title
+                    = f.text_field :email, class: 'form-control'
+                    %span.input-group-btn
+                      = f.submit "Subscribe", class: 'btn', onclick: "ga('send', 'event', 'Subscribe', 'Click', 'Subscribe');"
+      
     .comments
       / START DISQUS
       #disqus_thread
