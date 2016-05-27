@@ -43,12 +43,13 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.friendly.find(params[:id])
+    @next_post = Post.find(@post.next_post.to_i) if @post.next_post
   end
 
   private
 
     def post_params
-      params.require(:post).permit(:title, :content, :body_html, :image, :short, :tag_list) if params[:post]
+      params.require(:post).permit(:title, :content, :body_html, :image, :short, :tag_list, :next_post) if params[:post]
     end
 
     def authenticate_correct_user!

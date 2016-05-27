@@ -14,8 +14,13 @@
             = @post.created_at.strftime("%A, %b %d")
         %p= raw @post.body_html
 
-        #related-posts
-        
+        - if @post.next_post
+          #related-posts
+            .row
+              .col-xs-12
+                %h2 Related Post
+                = link_to @next_post.title, @next_post
+          
         - if @post.tag_list.include?('coming-soon')
 
           #subscribe
