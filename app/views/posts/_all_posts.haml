@@ -4,7 +4,7 @@
       .post.big
         .row
           .col-md-6.media
-            = image_tag(post.image.url(:large), class: 'img-responsive')
+            = link_to image_tag(post.image.url(:large), class: 'img-responsive'), post
           .col-md-6.caption
             %span.post-tag
               -post.tag_list.each do |tag|
