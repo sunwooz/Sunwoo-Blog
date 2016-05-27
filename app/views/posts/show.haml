@@ -13,6 +13,7 @@
           %i{ style: "font-size: .7em;" }
             = @post.created_at.strftime("%A, %b %d")
         %p= raw @post.body_html
+        = hidden_field_tag :post_id, @post.id
 
         - if @post.next_post
           #related-posts
