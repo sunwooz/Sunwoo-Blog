@@ -1,3 +1,15 @@
+#posts.container
+  %section.col-md-12.wow.fadeIn
+    .post.big
+      .row
+        .col-md-6.media
+          = image_tag("https://s3.amazonaws.com/sunwooyang-blog/post-pictures/Screen+Shot+2016-06-14+at+11.41.54+AM.png", class: 'img-responsive', alt: "VRMachine Gear VR Games")
+        .col-md-6.caption
+          %h1{ class: 'post-title' }=link_to "VRMachine GearVR Search Engine", "vrmachine.io", target: "_blank"
+          %span.post-tag
+            Made in 2016
+          %p.post-description
+            A search/filter engine to help GearVR enthusiasts find the best Gear VR game.
 
 #posts.container
   %section.col-md-12.wow.fadeIn
