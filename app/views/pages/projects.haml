@@ -16,6 +16,19 @@
     .post.big
       .row
         .col-md-6.media
+          = image_tag("https://s3.amazonaws.com/sunwooyang-blog/post-pictures/Screen+Shot+2016-06-18+at+12.26.37+PM.png", class: 'img-responsive', alt: "GemifyJS: Easy way to turn your assets into ruby gems")
+        .col-md-6.caption
+          %h1{ class: 'post-title' }=link_to "GemifyJS", "gemify-js.herokuapp.com", target: "_blank"
+          %span.post-tag
+            Made in 2014
+          %p.post-description
+            A web application to easily turn image/css/js assets into ruby gems.
+
+#posts.container
+  %section.col-md-12.wow.fadeIn
+    .post.big
+      .row
+        .col-md-6.media
           = image_tag("https://s3.amazonaws.com/sunwooyang-blog/post-pictures/hnjs", class: 'img-responsive')
         .col-md-6.caption
           %h1{ class: 'post-title' }=link_to "Hacker News Job Search", "http://production-hnjs.us-east-1.elasticbeanstalk.com/", target: "_blank"
